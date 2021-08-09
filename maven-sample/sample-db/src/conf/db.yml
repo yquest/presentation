@@ -1,0 +1,7 @@
+entities:
+  com.capgemini.db.SampleDB:
+    table: my_table
+    columns:
+      column_a : int
+      column_b : text
+    pk : column_a

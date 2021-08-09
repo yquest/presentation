@@ -1,0 +1,21 @@
+group 'gradle-sample'
+version '1.0-SNAPSHOT'
+
+subprojects {
+    task 'deleteSrc'() {
+        doFirst {
+            delete "${it.project.projectDir}/src"
+        }
+        group 'source'
+    }
+
+    task 'copyFromMaven'(type: Copy) {
+        from "${rootDir}/../maven-sample/${it.project.name}/src"
+        into "${it.project.projectDir}/src"
+        group 'source'
+    }
+    repositories {
+        mavenCentral()
+    }
+}
+

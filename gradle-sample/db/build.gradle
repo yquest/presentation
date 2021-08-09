@@ -1,0 +1,31 @@
+import gg.jte.ContentType
+buildscript {
+    ext{
+        jteVersion = '1.11.1'
+    }
+    dependencies {
+        classpath "gg.jte:jte-gradle-plugin:${jteVersion}"
+    }
+}
+plugins {
+    id 'java'
+}
+apply plugin: 'gg.jte.gradle'
+dependencies {
+    implementation "gg.jte:jte:${jteVersion}"
+    implementation('org.yaml:snakeyaml:1.28')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+jte {
+    sourceDirectory = file('src/main/tpl').toPath()
+    contentType = ContentType.Plain
+}
+
+sourceSets{
+    main{
+        java{
+            srcDirs 'build/generated-sources/jte'
+        }
+    }
+}

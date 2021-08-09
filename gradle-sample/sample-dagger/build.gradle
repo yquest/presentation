@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+}
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+    annotationProcessor project(':log')
+    //noinspection GradlePackageUpdate
+    annotationProcessor "com.google.dagger:dagger-compiler:2.36"
+    implementation 'com.google.dagger:dagger:2.36'
+    implementation project(':annotations')
+    testImplementation("junit:junit:4.12")
+}

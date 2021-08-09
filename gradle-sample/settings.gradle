@@ -1,0 +1,9 @@
+rootProject.name = 'gradle-sample'
+include 'annotations'
+include 'log'
+include 'db'
+include 'sample-dagger'
+include 'sample-log'
+include 'sample-db'
+
+

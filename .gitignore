@@ -1,0 +1,23 @@
+# Project exclude paths
+/gradle-sample/.gradle/
+/gradle-sample/annotations/build/
+/gradle-sample/db/build/
+/gradle-sample/log/build/
+/gradle-sample/sample-dagger/build/
+/gradle-sample/sample-db/build/
+/gradle-sample/sample-log/build/
+/maven-sample/annotations/target/
+/maven-sample/db/target/
+/maven-sample/log/target/
+/maven-sample/sample-dagger/target/
+/maven-sample/sample-db/target/
+/maven-sample/sample-log/target/
+/gradle-sample/.idea
+/gradle-sample/annotations/src
+/gradle-sample/db/src
+/gradle-sample/log/src
+/gradle-sample/sample-dagger/src
+/gradle-sample/sample-db/src
+/gradle-sample/sample-log/src
+/.idea
+/maven-sample/.idea/
